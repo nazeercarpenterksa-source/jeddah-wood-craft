@@ -80,21 +80,35 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "نجار جدة | أفضل نجار في جدة - Best Carpenter in Jeddah" },
+      { name: "description", content: "أفضل نجار بجدة لخدمات النجارة المنزلية: فك وتركيب غرف نوم، مطابخ، أبواب، ديكورات. خبرة 15+ سنة وضمان على الأعمال." },
+      { name: "author", content: "Jeddah Carpenter" },
+      { property: "og:title", content: "نجار جدة | Best Carpenter in Jeddah" },
+      { property: "og:description", content: "خدمات نجارة احترافية في جميع أحياء جدة" },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "نجار جدة" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
+      { rel: "stylesheet", href: appCss },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" },
     ],
+    scripts: [{
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        name: "نجار جدة - Jeddah Carpenter",
+        image: "",
+        telephone: "+966500000000",
+        address: { "@type": "PostalAddress", addressLocality: "Jeddah", addressCountry: "SA" },
+        areaServed: "Jeddah",
+        priceRange: "$$",
+        openingHours: "Sa-Th 07:00-22:00",
+      }),
+    }],
   }),
   shellComponent: RootShell,
   component: RootComponent,
@@ -104,7 +118,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="ar" dir="rtl">
       <head>
         <HeadContent />
       </head>
@@ -121,8 +135,12 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <Navbar />
+      <main className="min-h-screen pb-24 md:pb-0">
+        <Outlet />
+      </main>
+      <Footer />
+      <FloatingCTA />
     </QueryClientProvider>
   );
 }
