@@ -72,7 +72,7 @@ function ServicePage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <SectionHeader align="start" kicker="ما الذي نقدمه" titleAr="تفاصيل الخدمة" titleEn="What We Do" />
           <ul className="mt-10 grid gap-3">
-            {service.tasks.map((t) => (
+            {service.tasks.map((t: string) => (
               <li key={t} className="flex items-start gap-4 bg-ink/[0.02] border-r-4 border-gold rounded-lg p-5">
                 <span className="h-6 w-6 rounded-full bg-gold text-black grid place-items-center text-xs font-black shrink-0 mt-0.5">✓</span>
                 <span className="text-base leading-relaxed">{t}</span>
