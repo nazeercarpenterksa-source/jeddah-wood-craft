@@ -7,9 +7,9 @@ export type Service = {
   tasks: string[];
 };
 
-export const PHONE = "+966500000000";
-export const PHONE_DISPLAY = "+966 50 000 0000";
-export const WHATSAPP = "966500000000";
+export const PHONE = "+966548614812";
+export const PHONE_DISPLAY = "+966 54 861 4812";
+export const WHATSAPP = "966548614812";
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP}`;
 export const TEL_URL = `tel:${PHONE}`;
 
