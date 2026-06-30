@@ -106,7 +106,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         "@type": "LocalBusiness",
         name: "نجار جدة - Jeddah Carpenter",
         image: "",
-        telephone: "+966500000000",
+        telephone: "+966548614812",
         address: { "@type": "PostalAddress", addressLocality: "Jeddah", addressCountry: "SA" },
         areaServed: "Jeddah",
         priceRange: "$$",
