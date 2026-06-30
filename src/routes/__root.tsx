@@ -92,7 +92,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:description", content: "أفضل نجار بجدة لخدمات النجارة المنزلية: فك وتركيب غرف نوم، مطابخ، أبواب، ديكورات. خبرة 15+ سنة وضمان على الأعمال." },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/0e4f6c99-821e-4e6e-a70e-840ed8590234/id-preview-836988a3--216c8eb0-81f6-4bbc-b3d7-b27e4a18d2f1.lovable.app-1781603124247.png" },
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/0e4f6c99-821e-4e6e-a70e-840ed8590234/id-preview-836988a3--216c8eb0-81f6-4bbc-b3d7-b27e4a18d2f1.lovable.app-1781603124247.png" },
-      { name: "google-site-verification", content: "google2408445c3f94dcf8" },
+      { name: "google-site-verification", content: "oqd_5vw86PFKmLJ2UQW2n2nhDjB4833chpd2l6rqMOA" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
