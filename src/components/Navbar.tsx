@@ -52,7 +52,9 @@ export function Navbar() {
           {links.map((l) => (
             <a key={l.to} href={l.to} onClick={() => setOpen(false)} className="block py-2 text-base border-b border-white/5">{l.label}</a>
           ))}
-          <a href={TEL_URL} className="font-en text-sm text-gold block pt-2" dir="ltr">{PHONE_DISPLAY}</a>
+          <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="font-en text-sm text-gold flex items-center gap-2 pt-2" dir="ltr">
+            <WhatsAppIcon className="h-4 w-4 text-[#25D366]" /> {PHONE_DISPLAY}
+          </a>
         </div>
       )}
     </header>
