@@ -30,8 +30,8 @@ export function Navbar() {
         </nav>
 
         <div className="hidden md:flex items-center gap-3">
-          <a href={TEL_URL} className="font-en text-sm text-white/80 hover:text-gold flex items-center gap-2" dir="ltr">
-            <PhoneIcon className="h-4 w-4" /> {PHONE_DISPLAY}
+          <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="font-en text-sm text-white/80 hover:text-gold flex items-center gap-2" dir="ltr">
+            <WhatsAppIcon className="h-4 w-4 text-[#25D366]" /> {PHONE_DISPLAY}
           </a>
           <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="h-9 w-9 grid place-items-center rounded-full bg-[#25D366] text-white hover:scale-105 transition">
             <WhatsAppIcon className="h-5 w-5" />
