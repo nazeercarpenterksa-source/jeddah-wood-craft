@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { SERVICES, NEIGHBORHOODS, TEL_URL, WHATSAPP_URL } from "@/lib/site-data";
-import { ServiceIcon, StarIcon } from "@/components/icons";
+import { SERVICES, NEIGHBORHOODS, TEL_URL, WHATSAPP_URL, PHONE_DISPLAY } from "@/lib/site-data";
+import { ServiceIcon, StarIcon, WhatsAppIcon } from "@/components/icons";
+import heroImage from "@/assets/hero-carpenter.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -34,7 +35,10 @@ function Home() {
     <div>
       {/* HERO */}
       <section className="wood-grain text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-black" />
+        <div className="absolute inset-0">
+          <img src={heroImage} alt="نجار محترف في جدة" width={1600} height={1024} className="w-full h-full object-cover opacity-40" />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-20 md:py-32">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 border border-gold/40 text-gold rounded-full px-4 py-1.5 text-xs mb-6">
@@ -91,14 +95,22 @@ function Home() {
                 key={s.slug}
                 to="/services/$slug"
                 params={{ slug: s.slug }}
-                className="group bg-[oklch(0.16_0_0)] border border-white/10 hover:border-gold rounded-lg p-6 transition-all hover:-translate-y-1"
+                className="group bg-[oklch(0.16_0_0)] border border-white/10 hover:border-gold rounded-lg overflow-hidden transition-all hover:-translate-y-1"
               >
-                <ServiceIcon name={s.icon} className="text-gold h-10 w-10" />
-                <h3 className="mt-4 font-bold text-base">{s.titleAr}</h3>
-                <div className="text-[11px] text-gold/80 font-en mt-0.5 tracking-wide">{s.titleEn}</div>
-                <p className="mt-3 text-xs text-white/60 leading-relaxed">{s.shortAr}</p>
-                <div className="mt-4 text-xs text-gold inline-flex items-center gap-1 group-hover:gap-2 transition-all">
-                  اقرأ المزيد <span>←</span>
+                <div className="relative aspect-[4/3] overflow-hidden bg-black">
+                  <img src={s.image} alt={s.titleAr} loading="lazy" width={800} height={640} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                  <div className="absolute top-3 right-3 h-10 w-10 rounded-md bg-gold/95 text-black grid place-items-center">
+                    <ServiceIcon name={s.icon} className="h-6 w-6" />
+                  </div>
+                </div>
+                <div className="p-5">
+                  <h3 className="font-bold text-base">{s.titleAr}</h3>
+                  <div className="text-[11px] text-gold/80 font-en mt-0.5 tracking-wide">{s.titleEn}</div>
+                  <p className="mt-3 text-xs text-white/60 leading-relaxed">{s.shortAr}</p>
+                  <div className="mt-4 text-xs text-gold inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                    اقرأ المزيد <span>←</span>
+                  </div>
                 </div>
               </Link>
             ))}
@@ -147,18 +159,18 @@ function Home() {
               اتصل بنا الآن أو راسلنا عبر واتساب للحصول على عرض سعر مجاني خلال دقائق. خدمتنا متاحة في جميع أحياء جدة.
             </p>
             <div className="mt-8 space-y-4">
-              <a href={TEL_URL} className="flex items-center gap-4 bg-ink text-white rounded-lg px-5 py-4 hover:bg-gold hover:text-black transition">
-                <span className="text-2xl">📞</span>
+              <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="flex items-center gap-4 bg-ink text-white rounded-lg px-5 py-4 hover:bg-gold hover:text-black transition">
+                <WhatsAppIcon className="h-7 w-7 text-[#25D366]" />
                 <div>
-                  <div className="text-xs opacity-70">اتصل الآن</div>
-                  <div className="font-bold font-en" dir="ltr">+966 50 000 0000</div>
+                  <div className="text-xs opacity-70">واتساب — اضغط للمحادثة</div>
+                  <div className="font-bold font-en" dir="ltr">{PHONE_DISPLAY}</div>
                 </div>
               </a>
-              <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="flex items-center gap-4 bg-[#25D366] text-white rounded-lg px-5 py-4 hover:opacity-90 transition">
-                <span className="text-2xl">💬</span>
+              <a href={TEL_URL} className="flex items-center gap-4 bg-[#25D366] text-white rounded-lg px-5 py-4 hover:opacity-90 transition">
+                <span className="text-2xl">📞</span>
                 <div>
-                  <div className="text-xs opacity-90">راسلنا</div>
-                  <div className="font-bold">واتساب — رد فوري</div>
+                  <div className="text-xs opacity-90">اتصل الآن</div>
+                  <div className="font-bold font-en" dir="ltr">{PHONE_DISPLAY}</div>
                 </div>
               </a>
               <div className="flex items-center gap-4 border border-border rounded-lg px-5 py-4">

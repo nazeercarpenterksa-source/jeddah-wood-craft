@@ -1,9 +1,21 @@
+import bedroomImg from "@/assets/services/bedroom-assembly.jpg";
+import kitchenImg from "@/assets/services/kitchen-installation.jpg";
+import doorImg from "@/assets/services/door-repair.jpg";
+import decorImg from "@/assets/services/wood-decoration.jpg";
+import customImg from "@/assets/services/custom-furniture.jpg";
+import ikeaImg from "@/assets/services/ikea-assembly.jpg";
+import curtainImg from "@/assets/services/curtain-installation.jpg";
+import stairImg from "@/assets/services/under-stair-storage.jpg";
+import pergolaImg from "@/assets/services/pergola-installation.jpg";
+import renovationImg from "@/assets/services/furniture-renovation.jpg";
+
 export type Service = {
   slug: string;
   titleAr: string;
   titleEn: string;
   shortAr: string;
   icon: string;
+  image: string;
   tasks: string[];
 };
 
@@ -26,6 +38,7 @@ export const SERVICES: Service[] = [
     titleEn: "Bedroom Assembly",
     shortAr: "تركيب وفك جميع أنواع غرف النوم باحترافية",
     icon: "bed",
+    image: bedroomImg,
     tasks: [
       "فك وتركيب جميع أنواع غرف النوم الكلاسيكية والمودرن",
       "تجميع غرف نوم ايكيا وجميع الماركات",
@@ -40,6 +53,7 @@ export const SERVICES: Service[] = [
     titleEn: "Kitchen Installation",
     shortAr: "تركيب وتفصيل جميع أنواع المطابخ الخشبية",
     icon: "kitchen",
+    image: kitchenImg,
     tasks: [
       "تركيب جميع أنواع المطابخ الخشبية",
       "تصنيع وتفصيل دواليب المطبخ حسب المقاس",
@@ -54,6 +68,7 @@ export const SERVICES: Service[] = [
     titleEn: "Door Repair",
     shortAr: "تصليح وتركيب جميع أنواع الأبواب",
     icon: "door",
+    image: doorImg,
     tasks: [
       "تصليح الأبواب الخشبية والمصفحة والألمنيوم",
       "تركيب وتغيير الكوالين والأقفال",
@@ -68,6 +83,7 @@ export const SERVICES: Service[] = [
     titleEn: "Wood Decoration",
     shortAr: "تصميم وتنفيذ ديكورات خشبية فاخرة",
     icon: "deco",
+    image: decorImg,
     tasks: [
       "تصميم وتنفيذ ديكورات الأسقف الخشبية",
       "ديكورات الجدران والبراويز الخشبية",
@@ -82,6 +98,7 @@ export const SERVICES: Service[] = [
     titleEn: "Custom Furniture",
     shortAr: "تفصيل أثاث حسب الطلب والمقاسات",
     icon: "chair",
+    image: customImg,
     tasks: [
       "تفصيل غرف نوم كاملة حسب الطلب",
       "تصنيع طاولات وكراسي وأرائك خشبية",
@@ -96,6 +113,7 @@ export const SERVICES: Service[] = [
     titleEn: "IKEA Assembly",
     shortAr: "خدمة سريعة لتركيب أثاث ايكيا",
     icon: "box",
+    image: ikeaImg,
     tasks: [
       "تركيب جميع قطع أثاث ايكيا",
       "فك أثاث ايكيا عند النقل وإعادة التركيب",
@@ -110,6 +128,7 @@ export const SERVICES: Service[] = [
     titleEn: "Curtain Installation",
     shortAr: "تركيب جميع أنواع الستائر والكورنيش",
     icon: "curtain",
+    image: curtainImg,
     tasks: [
       "تركيب جميع أنواع الستائر والكورنيش",
       "تركيب رولوبلايند وشرائح أفنشيان",
@@ -124,6 +143,7 @@ export const SERVICES: Service[] = [
     titleEn: "Under-Stair Storage",
     shortAr: "استغلال أمثل لمساحة تحت السلم",
     icon: "stairs",
+    image: stairImg,
     tasks: [
       "تصميم وتنفيذ خزائن تحت السلم",
       "استغلال أمثل للمساحات الفارغة",
@@ -138,6 +158,7 @@ export const SERVICES: Service[] = [
     titleEn: "Pergola Installation",
     shortAr: "برجولات خشبية للحدائق والأسطح",
     icon: "pergola",
+    image: pergolaImg,
     tasks: [
       "تركيب برجولات خشبية للحدائق والأسطح",
       "تصميم برجولات حسب مساحة المكان",
@@ -152,6 +173,7 @@ export const SERVICES: Service[] = [
     titleEn: "Furniture Renovation",
     shortAr: "إعادة الحياة لأثاثك القديم",
     icon: "renew",
+    image: renovationImg,
     tasks: [
       "ترميم وتصليح الأثاث التالف والمكسور",
       "تجديد دهانات وتشطيبات الأخشاب",

@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { SERVICES, NEIGHBORHOODS, PHONE_DISPLAY, TEL_URL, WHATSAPP_URL } from "@/lib/site-data";
+import { WhatsAppIcon } from "./icons";
 
 export function Footer() {
   return (
@@ -13,7 +14,9 @@ export function Footer() {
           <p className="text-sm leading-relaxed">
             أفضل نجار في جدة لخدمات النجارة المنزلية والتجارية. خبرة تزيد عن 15 سنة وضمان على جميع الأعمال.
           </p>
-          <p className="text-sm mt-4 font-en text-gold" dir="ltr">{PHONE_DISPLAY}</p>
+          <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="mt-4 inline-flex items-center gap-2 text-sm font-en text-gold hover:text-white transition" dir="ltr">
+            <WhatsAppIcon className="h-4 w-4 text-[#25D366]" /> {PHONE_DISPLAY}
+          </a>
           <p className="text-xs mt-2 text-white/60">جدة، المملكة العربية السعودية</p>
         </div>
 

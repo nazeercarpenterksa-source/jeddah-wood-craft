@@ -46,8 +46,12 @@ function ServicePage() {
 
   return (
     <div>
-      <section className="wood-grain text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+      <section className="wood-grain text-white relative overflow-hidden">
+        <div className="absolute inset-0">
+          <img src={service.image} alt={service.titleAr} width={1600} height={900} className="w-full h-full object-cover opacity-30" />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-16 md:py-24">
           <Link to="/" className="text-gold text-sm mb-6 inline-flex items-center gap-2">← الرئيسية</Link>
           <div className="flex items-start gap-6 flex-wrap">
             <div className="h-20 w-20 rounded-lg bg-gold text-black grid place-items-center shrink-0">
