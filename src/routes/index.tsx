@@ -159,18 +159,18 @@ function Home() {
               اتصل بنا الآن أو راسلنا عبر واتساب للحصول على عرض سعر مجاني خلال دقائق. خدمتنا متاحة في جميع أحياء جدة.
             </p>
             <div className="mt-8 space-y-4">
-              <a href={TEL_URL} className="flex items-center gap-4 bg-ink text-white rounded-lg px-5 py-4 hover:bg-gold hover:text-black transition">
-                <span className="text-2xl">📞</span>
+              <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="flex items-center gap-4 bg-ink text-white rounded-lg px-5 py-4 hover:bg-gold hover:text-black transition">
+                <WhatsAppIcon className="h-7 w-7 text-[#25D366]" />
                 <div>
-                  <div className="text-xs opacity-70">اتصل الآن</div>
-                  <div className="font-bold font-en" dir="ltr">+966 50 000 0000</div>
+                  <div className="text-xs opacity-70">واتساب — اضغط للمحادثة</div>
+                  <div className="font-bold font-en" dir="ltr">{PHONE_DISPLAY}</div>
                 </div>
               </a>
-              <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="flex items-center gap-4 bg-[#25D366] text-white rounded-lg px-5 py-4 hover:opacity-90 transition">
-                <span className="text-2xl">💬</span>
+              <a href={TEL_URL} className="flex items-center gap-4 bg-[#25D366] text-white rounded-lg px-5 py-4 hover:opacity-90 transition">
+                <span className="text-2xl">📞</span>
                 <div>
-                  <div className="text-xs opacity-90">راسلنا</div>
-                  <div className="font-bold">واتساب — رد فوري</div>
+                  <div className="text-xs opacity-90">اتصل الآن</div>
+                  <div className="font-bold font-en" dir="ltr">{PHONE_DISPLAY}</div>
                 </div>
               </a>
               <div className="flex items-center gap-4 border border-border rounded-lg px-5 py-4">
