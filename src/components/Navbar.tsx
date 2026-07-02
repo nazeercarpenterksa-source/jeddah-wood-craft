@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { PHONE_DISPLAY, TEL_URL, WHATSAPP_URL } from "@/lib/site-data";
-import { PhoneIcon, WhatsAppIcon } from "./icons";
+import { PHONE_DISPLAY, WHATSAPP_URL } from "@/lib/site-data";
+import { WhatsAppIcon } from "./icons";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
