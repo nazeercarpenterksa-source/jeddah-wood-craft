@@ -35,7 +35,10 @@ function Home() {
     <div>
       {/* HERO */}
       <section className="wood-grain text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-black" />
+        <div className="absolute inset-0">
+          <img src={heroImage} alt="نجار محترف في جدة" width={1600} height={1024} className="w-full h-full object-cover opacity-40" />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-20 md:py-32">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 border border-gold/40 text-gold rounded-full px-4 py-1.5 text-xs mb-6">
