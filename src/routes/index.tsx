@@ -95,14 +95,22 @@ function Home() {
                 key={s.slug}
                 to="/services/$slug"
                 params={{ slug: s.slug }}
-                className="group bg-[oklch(0.16_0_0)] border border-white/10 hover:border-gold rounded-lg p-6 transition-all hover:-translate-y-1"
+                className="group bg-[oklch(0.16_0_0)] border border-white/10 hover:border-gold rounded-lg overflow-hidden transition-all hover:-translate-y-1"
               >
-                <ServiceIcon name={s.icon} className="text-gold h-10 w-10" />
-                <h3 className="mt-4 font-bold text-base">{s.titleAr}</h3>
-                <div className="text-[11px] text-gold/80 font-en mt-0.5 tracking-wide">{s.titleEn}</div>
-                <p className="mt-3 text-xs text-white/60 leading-relaxed">{s.shortAr}</p>
-                <div className="mt-4 text-xs text-gold inline-flex items-center gap-1 group-hover:gap-2 transition-all">
-                  اقرأ المزيد <span>←</span>
+                <div className="relative aspect-[4/3] overflow-hidden bg-black">
+                  <img src={s.image} alt={s.titleAr} loading="lazy" width={800} height={640} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                  <div className="absolute top-3 right-3 h-10 w-10 rounded-md bg-gold/95 text-black grid place-items-center">
+                    <ServiceIcon name={s.icon} className="h-6 w-6" />
+                  </div>
+                </div>
+                <div className="p-5">
+                  <h3 className="font-bold text-base">{s.titleAr}</h3>
+                  <div className="text-[11px] text-gold/80 font-en mt-0.5 tracking-wide">{s.titleEn}</div>
+                  <p className="mt-3 text-xs text-white/60 leading-relaxed">{s.shortAr}</p>
+                  <div className="mt-4 text-xs text-gold inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                    اقرأ المزيد <span>←</span>
+                  </div>
                 </div>
               </Link>
             ))}
