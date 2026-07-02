@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { SERVICES, NEIGHBORHOODS, PHONE_DISPLAY, TEL_URL, WHATSAPP_URL } from "@/lib/site-data";
+import { WhatsAppIcon } from "./icons";
 
 export function Footer() {
   return (
