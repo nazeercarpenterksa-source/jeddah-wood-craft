@@ -2,6 +2,16 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { SERVICES, TEL_URL, WHATSAPP_URL } from "@/lib/site-data";
 import { ServiceIcon } from "@/components/icons";
 import { SectionHeader } from "@/routes/index";
+import { marked } from "marked";
+
+const contentModules = import.meta.glob("../content/services/*.md", { query: "?raw", import: "default", eager: true }) as Record<string, string>;
+const contentBySlug: Record<string, string> = {};
+for (const [path, raw] of Object.entries(contentModules)) {
+  const slug = path.split("/").pop()!.replace(/\.md$/, "");
+  // Strip the H1 heading since the page already shows the title in the hero.
+  const stripped = raw.replace(/^#\s+.+\n+/, "");
+  contentBySlug[slug] = marked.parse(stripped, { async: false }) as string;
+}
 
 export const Route = createFileRoute("/services/$slug")({
   head: ({ params }) => {
@@ -85,6 +95,17 @@ function ServicePage() {
           </ul>
         </div>
       </section>
+
+      {contentBySlug[service.slug] && (
+        <section className="bg-white pb-16 md:pb-20">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6">
+            <article
+              className="service-article"
+              dangerouslySetInnerHTML={{ __html: contentBySlug[service.slug] }}
+            />
+          </div>
+        </section>
+      )}
 
       <section className="bg-ink text-white py-16 md:py-20">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
