@@ -96,6 +96,17 @@ function ServicePage() {
         </div>
       </section>
 
+      {contentBySlug[service.slug] && (
+        <section className="bg-white pb-16 md:pb-20">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6">
+            <article
+              className="service-article"
+              dangerouslySetInnerHTML={{ __html: contentBySlug[service.slug] }}
+            />
+          </div>
+        </section>
+      )}
+
       <section className="bg-ink text-white py-16 md:py-20">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <SectionHeader dark kicker="مميزاتنا" titleAr="لماذا تختارنا لهذه الخدمة؟" titleEn="Why Choose Us" />
