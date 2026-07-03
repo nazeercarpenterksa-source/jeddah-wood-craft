@@ -2,6 +2,16 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { SERVICES, TEL_URL, WHATSAPP_URL } from "@/lib/site-data";
 import { ServiceIcon } from "@/components/icons";
 import { SectionHeader } from "@/routes/index";
+import { marked } from "marked";
+
+const contentModules = import.meta.glob("../content/services/*.md", { query: "?raw", import: "default", eager: true }) as Record<string, string>;
+const contentBySlug: Record<string, string> = {};
+for (const [path, raw] of Object.entries(contentModules)) {
+  const slug = path.split("/").pop()!.replace(/\.md$/, "");
+  // Strip the H1 heading since the page already shows the title in the hero.
+  const stripped = raw.replace(/^#\s+.+\n+/, "");
+  contentBySlug[slug] = marked.parse(stripped, { async: false }) as string;
+}
 
 export const Route = createFileRoute("/services/$slug")({
   head: ({ params }) => {
