@@ -282,7 +282,7 @@ function ServicePage() {
 
       <section className="bg-ink text-white py-16 md:py-20">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
-          <SectionHeader dark kicker="مميزاتنا" titleAr="لماذا تختار خدمتنا لتركيب غرف النوم" titleEn="Why Choose Our Bedroom Installation Service" />
+          <SectionHeader dark kicker="مميزاتنا" titleAr={override?.whyChooseAr ?? `لماذا تختار خدمتنا لـ${service.titleAr}`} titleEn={override?.whyChooseEn ?? `Why Choose Our ${service.titleEn} Service`} />
           <div className="grid md:grid-cols-3 gap-5 mt-10">
             {reasons.map((r) => (
               <div key={r.titleAr} className="border border-white/10 hover:border-gold rounded-lg p-6 transition">
