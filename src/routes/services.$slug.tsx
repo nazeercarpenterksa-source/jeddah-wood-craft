@@ -19,6 +19,9 @@ type SeoOverride = {
   title: string;
   description: string;
   keywordEn: string;
+  whyChooseAr?: string;
+  whyChooseEn?: string;
+  ctaTitleAr?: string;
   faqs?: { q: string; a: string }[];
   relatedSlugs?: string[];
 };
@@ -28,6 +31,9 @@ const SEO_OVERRIDES: Record<string, SeoOverride> = {
     description:
       "Professional bedroom installation service in Jeddah — تركيب وفك جميع أنواع غرف النوم باحترافية مع ضمان وأسعار مناسبة.",
     keywordEn: "Bedroom Installation Service Jeddah",
+    whyChooseAr: "لماذا تختار خدمتنا لتركيب غرف النوم",
+    whyChooseEn: "Why Choose Our Bedroom Installation Service",
+    ctaTitleAr: "جاهز لتركيب غرفة نومك اليوم؟",
     relatedSlugs: ["custom-furniture", "ikea-assembly", "kitchen-installation", "door-repair"],
     faqs: [
       {
@@ -45,6 +51,34 @@ const SEO_OVERRIDES: Record<string, SeoOverride> = {
       {
         q: "هل تغطون جميع أحياء جدة؟",
         a: "نعم، نغطي جميع أحياء جدة بما فيها حي الروضة، حي السلامة، حي الحمراء، حي الزهراء، حي الأندلس، حي النزهة وغيرها.",
+      },
+    ],
+  },
+  "door-repair": {
+    title: "Door Repair Service in Jeddah | صيانة وتصليح أبواب",
+    description:
+      "Professional door repair service in Jeddah — تصليح وتركيب جميع أنواع الأبواب باحترافية وسرعة، مع ضمان وأسعار مناسبة.",
+    keywordEn: "Door Repair Service Jeddah",
+    whyChooseAr: "لماذا تختار خدمتنا لإصلاح الأبواب",
+    whyChooseEn: "Why Choose Our Door Repair Service",
+    ctaTitleAr: "بابك يحتاج إصلاح عاجل؟",
+    relatedSlugs: ["custom-furniture", "kitchen-installation", "bedroom-assembly", "ikea-assembly"],
+    faqs: [
+      {
+        q: "كم تستغرق خدمة إصلاح الأبواب؟",
+        a: "معظم أعمال الإصلاح تنجز في نفس اليوم خلال 1-3 ساعات حسب نوع المشكلة، سواء كانت في المفصلات أو القفل أو الإطار.",
+      },
+      {
+        q: "هل تصلحون جميع أنواع الأبواب؟",
+        a: "نعم، نصلح الأبواب الخشبية، المصفحة، الألمنيوم، الزجاجية، وأبواب الخزائن والمطابخ في جميع أحياء جدة.",
+      },
+      {
+        q: "هل تقدمون ضماناً على الإصلاح؟",
+        a: "نعم، نقدم ضماناً على أعمال إصلاح الأبواب يشمل المفصلات والأقفال والتركيب.",
+      },
+      {
+        q: "هل توفرون خدمة عاجلة في نفس اليوم؟",
+        a: "نعم، نوفر خدمة سريعة للحالات العاجلة داخل جدة ونصل خلال ساعات قليلة.",
       },
     ],
   },
@@ -230,7 +264,7 @@ function ServicePage() {
 
             <div className="mt-10 bg-ink text-white rounded-lg p-6 md:p-8 flex flex-col sm:flex-row items-center justify-between gap-4 border-r-4 border-gold">
               <div className="text-center sm:text-right">
-                <div className="text-xl md:text-2xl font-black">جاهز لتركيب غرفة نومك اليوم؟</div>
+                <div className="text-xl md:text-2xl font-black">{override?.ctaTitleAr ?? `تحتاج ${service.titleAr}؟ نحن هنا لمساعدتك`}</div>
                 <p className="text-white/70 text-sm mt-1">رد فوري خلال دقائق — تغطية جميع أحياء جدة</p>
               </div>
               <a
@@ -248,7 +282,7 @@ function ServicePage() {
 
       <section className="bg-ink text-white py-16 md:py-20">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
-          <SectionHeader dark kicker="مميزاتنا" titleAr="لماذا تختار خدمتنا لتركيب غرف النوم" titleEn="Why Choose Our Bedroom Installation Service" />
+          <SectionHeader dark kicker="مميزاتنا" titleAr={override?.whyChooseAr ?? `لماذا تختار خدمتنا لـ${service.titleAr}`} titleEn={override?.whyChooseEn ?? `Why Choose Our ${service.titleEn} Service`} />
           <div className="grid md:grid-cols-3 gap-5 mt-10">
             {reasons.map((r) => (
               <div key={r.titleAr} className="border border-white/10 hover:border-gold rounded-lg p-6 transition">
