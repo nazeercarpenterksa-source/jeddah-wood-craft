@@ -264,7 +264,7 @@ function ServicePage() {
 
             <div className="mt-10 bg-ink text-white rounded-lg p-6 md:p-8 flex flex-col sm:flex-row items-center justify-between gap-4 border-r-4 border-gold">
               <div className="text-center sm:text-right">
-                <div className="text-xl md:text-2xl font-black">جاهز لتركيب غرفة نومك اليوم؟</div>
+                <div className="text-xl md:text-2xl font-black">{override?.ctaTitleAr ?? `تحتاج ${service.titleAr}؟ نحن هنا لمساعدتك`}</div>
                 <p className="text-white/70 text-sm mt-1">رد فوري خلال دقائق — تغطية جميع أحياء جدة</p>
               </div>
               <a
