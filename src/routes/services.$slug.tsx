@@ -19,6 +19,9 @@ type SeoOverride = {
   title: string;
   description: string;
   keywordEn: string;
+  whyChooseAr?: string;
+  whyChooseEn?: string;
+  ctaTitleAr?: string;
   faqs?: { q: string; a: string }[];
   relatedSlugs?: string[];
 };
@@ -28,6 +31,9 @@ const SEO_OVERRIDES: Record<string, SeoOverride> = {
     description:
       "Professional bedroom installation service in Jeddah — تركيب وفك جميع أنواع غرف النوم باحترافية مع ضمان وأسعار مناسبة.",
     keywordEn: "Bedroom Installation Service Jeddah",
+    whyChooseAr: "لماذا تختار خدمتنا لتركيب غرف النوم",
+    whyChooseEn: "Why Choose Our Bedroom Installation Service",
+    ctaTitleAr: "جاهز لتركيب غرفة نومك اليوم؟",
     relatedSlugs: ["custom-furniture", "ikea-assembly", "kitchen-installation", "door-repair"],
     faqs: [
       {
@@ -45,6 +51,34 @@ const SEO_OVERRIDES: Record<string, SeoOverride> = {
       {
         q: "هل تغطون جميع أحياء جدة؟",
         a: "نعم، نغطي جميع أحياء جدة بما فيها حي الروضة، حي السلامة، حي الحمراء، حي الزهراء، حي الأندلس، حي النزهة وغيرها.",
+      },
+    ],
+  },
+  "door-repair": {
+    title: "Door Repair Service in Jeddah | صيانة وتصليح أبواب",
+    description:
+      "Professional door repair service in Jeddah — تصليح وتركيب جميع أنواع الأبواب باحترافية وسرعة، مع ضمان وأسعار مناسبة.",
+    keywordEn: "Door Repair Service Jeddah",
+    whyChooseAr: "لماذا تختار خدمتنا لإصلاح الأبواب",
+    whyChooseEn: "Why Choose Our Door Repair Service",
+    ctaTitleAr: "بابك يحتاج إصلاح عاجل؟",
+    relatedSlugs: ["custom-furniture", "kitchen-installation", "bedroom-assembly", "ikea-assembly"],
+    faqs: [
+      {
+        q: "كم تستغرق خدمة إصلاح الأبواب؟",
+        a: "معظم أعمال الإصلاح تنجز في نفس اليوم خلال 1-3 ساعات حسب نوع المشكلة، سواء كانت في المفصلات أو القفل أو الإطار.",
+      },
+      {
+        q: "هل تصلحون جميع أنواع الأبواب؟",
+        a: "نعم، نصلح الأبواب الخشبية، المصفحة، الألمنيوم، الزجاجية، وأبواب الخزائن والمطابخ في جميع أحياء جدة.",
+      },
+      {
+        q: "هل تقدمون ضماناً على الإصلاح؟",
+        a: "نعم، نقدم ضماناً على أعمال إصلاح الأبواب يشمل المفصلات والأقفال والتركيب.",
+      },
+      {
+        q: "هل توفرون خدمة عاجلة في نفس اليوم؟",
+        a: "نعم، نوفر خدمة سريعة للحالات العاجلة داخل جدة ونصل خلال ساعات قليلة.",
       },
     ],
   },
