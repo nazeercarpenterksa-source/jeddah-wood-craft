@@ -4,7 +4,7 @@ import { ServiceIcon } from "@/components/icons";
 import { SectionHeader } from "@/routes/index";
 import { marked } from "marked";
 
-const SITE = "https://jeddah-wood-craft.lovable.app";
+const SITE = "https://www.nazeercarpenter.com";
 
 const contentModules = import.meta.glob("../content/services/*.md", { query: "?raw", import: "default", eager: true }) as Record<string, string>;
 const contentBySlug: Record<string, string> = {};
