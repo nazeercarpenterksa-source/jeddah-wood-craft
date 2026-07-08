@@ -9,9 +9,9 @@ export const Route = createFileRoute("/contact")({
       { title: "تواصل معنا | نجار جدة - Contact" },
       { name: "description", content: "تواصل مع أفضل نجار في جدة عبر الهاتف أو واتساب للحصول على عرض سعر مجاني." },
       { property: "og:title", content: "تواصل معنا | نجار جدة" },
-      { property: "og:url", content: "/contact" },
+      { property: "og:url", content: "https://www.nazeercarpenter.com/contact" },
     ],
-    links: [{ rel: "canonical", href: "/contact" }],
+    links: [{ rel: "canonical", href: "https://www.nazeercarpenter.com/contact" }],
   }),
   component: Contact,
 });
