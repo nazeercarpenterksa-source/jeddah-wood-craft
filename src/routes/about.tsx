@@ -8,9 +8,9 @@ export const Route = createFileRoute("/about")({
       { title: "من نحن | نجار جدة - About Us" },
       { name: "description", content: "تعرف على نجار جدة - خبرة 15 سنة في النجارة و2000+ عميل راضٍ في جميع أحياء جدة." },
       { property: "og:title", content: "من نحن | نجار جدة" },
-      { property: "og:url", content: "/about" },
+      { property: "og:url", content: "https://www.nazeercarpenter.com/about" },
     ],
-    links: [{ rel: "canonical", href: "/about" }],
+    links: [{ rel: "canonical", href: "https://www.nazeercarpenter.com/about" }],
   }),
   component: About,
 });
