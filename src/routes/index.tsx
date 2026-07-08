@@ -10,9 +10,9 @@ export const Route = createFileRoute("/")({
       { name: "description", content: "نجار محترف في جدة لخدمات فك وتركيب الأثاث، المطابخ، الأبواب والديكورات. اتصل الآن لخدمة سريعة في كل أحياء جدة." },
       { property: "og:title", content: "نجار جدة | Best Carpenter in Jeddah" },
       { property: "og:description", content: "خدمات نجارة احترافية في جميع أحياء جدة - خبرة 15 سنة" },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: "https://www.nazeercarpenter.com/" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "https://www.nazeercarpenter.com/" }],
   }),
   component: Home,
 });
