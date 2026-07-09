@@ -7,12 +7,37 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "نجار جدة | أفضل نجار في جدة - Best Carpenter in Jeddah" },
-      { name: "description", content: "نجار محترف في جدة لخدمات فك وتركيب الأثاث، المطابخ، الأبواب والديكورات. اتصل الآن لخدمة سريعة في كل أحياء جدة." },
+      { name: "description", content: "نجار محترف في حي الحمدانية بجدة لخدمات فك وتركيب الأثاث، المطابخ، الأبواب والديكورات. نخدم حي الحمدانية، الفلاح، الكوثر، الريحان، الصالحية، الأصالة وجميع أحياء جدة." },
       { property: "og:title", content: "نجار جدة | Best Carpenter in Jeddah" },
-      { property: "og:description", content: "خدمات نجارة احترافية في جميع أحياء جدة - خبرة 15 سنة" },
+      { property: "og:description", content: "خدمات نجارة احترافية في حي الحمدانية وجميع أحياء جدة - خبرة 15 سنة" },
       { property: "og:url", content: "https://www.nazeercarpenter.com/" },
     ],
     links: [{ rel: "canonical", href: "https://www.nazeercarpenter.com/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          name: "نجار جدة - Jeddah Carpenter",
+          image: "https://www.nazeercarpenter.com/",
+          telephone: PHONE,
+          priceRange: "$$",
+          url: "https://www.nazeercarpenter.com/",
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Al Hamadaniyyah, Jeddah",
+            addressRegion: "Makkah",
+            addressCountry: "SA",
+          },
+          openingHours: "Sa-Th 07:00-22:00",
+          areaServed: [
+            ...PRIMARY_NEIGHBORHOODS_EN.map((n) => ({ "@type": "Place", name: `${n}, Jeddah` })),
+            { "@type": "City", name: "Jeddah" },
+          ],
+        }),
+      },
+    ],
   }),
   component: Home,
 });
