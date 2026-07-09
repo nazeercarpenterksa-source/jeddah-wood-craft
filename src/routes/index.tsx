@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { SERVICES, NEIGHBORHOODS, TEL_URL, WHATSAPP_URL, PHONE_DISPLAY } from "@/lib/site-data";
+import { SERVICES, NEIGHBORHOODS, TEL_URL, WHATSAPP_URL, PHONE_DISPLAY, PHONE, COVERAGE_PARAGRAPH, PRIMARY_NEIGHBORHOODS_EN } from "@/lib/site-data";
 import { ServiceIcon, StarIcon, WhatsAppIcon } from "@/components/icons";
 import heroImage from "@/assets/hero-carpenter.jpg";
 
