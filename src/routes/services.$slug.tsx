@@ -310,6 +310,10 @@ function ServicePage() {
                 تواصل معنا الآن عبر واتساب 💬
               </a>
             </div>
+
+            <p className="mt-6 text-sm leading-relaxed text-ink/80 bg-gold/10 border-r-4 border-gold rounded-lg p-5">
+              {COVERAGE_PARAGRAPH}
+            </p>
           </div>
         </section>
       )}
