@@ -47,10 +47,11 @@ function Home() {
             </div>
             <h1 className="text-4xl md:text-6xl font-black leading-tight">
               أفضل <span className="text-gold">نجار في جدة</span>
+              <span className="block text-lg md:text-2xl text-white/80 font-bold mt-3">نجار في حي الحمدانية وما حولها</span>
               <span className="block text-xl md:text-2xl text-white/70 font-en font-semibold mt-3 tracking-tight">Best Carpenter in Jeddah</span>
             </h1>
             <p className="mt-6 text-base md:text-lg text-white/80 leading-relaxed max-w-2xl">
-              خدمات نجارة احترافية لجميع أحياء جدة — فك وتركيب الأثاث، تفصيل مطابخ، ديكورات خشبية، أبواب وأكثر. خبرة تزيد عن 15 سنة وضمان كامل على جميع الأعمال.
+              خدمات نجارة احترافية لجميع أحياء جدة — نتواجد في حي الحمدانية ونخدم حي الفلاح، حي الكوثر، حي الريحان، حي الصالحية، حي الأصالة وباقي أحياء جدة. فك وتركيب الأثاث، تفصيل مطابخ، ديكورات خشبية، أبواب وأكثر. خبرة تزيد عن 15 سنة وضمان كامل على جميع الأعمال.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href={TEL_URL} className="bg-gold text-black font-bold px-6 py-3.5 rounded-md hover:bg-[oklch(0.82_0.14_85)] transition inline-flex items-center gap-2">
