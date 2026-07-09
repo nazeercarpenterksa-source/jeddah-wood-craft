@@ -26,9 +26,16 @@ export const WHATSAPP_URL = `https://wa.me/${WHATSAPP}`;
 export const TEL_URL = `tel:${PHONE}`;
 
 export const NEIGHBORHOODS = [
+  "حي الحمدانية","حي الفلاح","حي الكوثر","حي الريحان","حي الصالحية","حي الأصالة",
   "حي الروضة","حي السلامة","حي الحمراء","حي الزهراء","حي الأندلس","حي النزهة",
   "حي الربوة","حي الصفا","حي المروة","حي البوادي","حي الكورنيش","حي الشاطئ",
   "حي بريمان","حي النعيم","حي الفيصلية","حي الخالدية",
+];
+
+export const COVERAGE_PARAGRAPH = "نتواجد في حي الحمدانية بجدة، ونقدم خدماتنا بشكل خاص لسكان حي الحمدانية، حي الفلاح، حي الكوثر، حي الريحان، حي الصالحية، وحي الأصالة، بالإضافة إلى جميع أحياء جدة الأخرى.";
+
+export const PRIMARY_NEIGHBORHOODS_EN = [
+  "Al Hamadaniyyah","Al Falah","Al Kawthar","Al Rayhan","Al Salhiyah","Al Asalah",
 ];
 
 export const SERVICES: Service[] = [

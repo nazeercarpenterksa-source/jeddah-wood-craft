@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { SERVICES, TEL_URL, WHATSAPP_URL, PHONE, NEIGHBORHOODS } from "@/lib/site-data";
+import { SERVICES, TEL_URL, WHATSAPP_URL, PHONE, NEIGHBORHOODS, COVERAGE_PARAGRAPH, PRIMARY_NEIGHBORHOODS_EN } from "@/lib/site-data";
 import { ServiceIcon } from "@/components/icons";
 import { SectionHeader } from "@/routes/index";
 import { marked } from "marked";
@@ -147,7 +147,10 @@ export const Route = createFileRoute("/services/$slug")({
           areaServed: {
             "@type": "City",
             name: "Jeddah",
-            containsPlace: NEIGHBORHOODS.map((n) => ({ "@type": "Place", name: n })),
+            containsPlace: [
+              ...PRIMARY_NEIGHBORHOODS_EN.map((n) => ({ "@type": "Place", name: `${n}, Jeddah` })),
+              ...NEIGHBORHOODS.map((n) => ({ "@type": "Place", name: n })),
+            ],
           },
           provider: {
             "@type": "LocalBusiness",
@@ -155,9 +158,12 @@ export const Route = createFileRoute("/services/$slug")({
             telephone: PHONE,
             priceRange: "$$",
             image: imageAbs,
-            address: { "@type": "PostalAddress", addressLocality: "Jeddah", addressCountry: "SA" },
+            address: { "@type": "PostalAddress", addressLocality: "Al Hamadaniyyah, Jeddah", addressRegion: "Makkah", addressCountry: "SA" },
             openingHours: "Sa-Th 07:00-22:00",
-            areaServed: "Jeddah",
+            areaServed: [
+              ...PRIMARY_NEIGHBORHOODS_EN.map((n) => ({ "@type": "Place", name: `${n}, Jeddah` })),
+              { "@type": "City", name: "Jeddah" },
+            ],
           },
           url: canonical,
         }),
@@ -304,6 +310,10 @@ function ServicePage() {
                 تواصل معنا الآن عبر واتساب 💬
               </a>
             </div>
+
+            <p className="mt-6 text-sm leading-relaxed text-ink/80 bg-gold/10 border-r-4 border-gold rounded-lg p-5">
+              {COVERAGE_PARAGRAPH}
+            </p>
           </div>
         </section>
       )}

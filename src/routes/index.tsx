@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { SERVICES, NEIGHBORHOODS, TEL_URL, WHATSAPP_URL, PHONE_DISPLAY } from "@/lib/site-data";
+import { SERVICES, NEIGHBORHOODS, TEL_URL, WHATSAPP_URL, PHONE_DISPLAY, PHONE, COVERAGE_PARAGRAPH, PRIMARY_NEIGHBORHOODS_EN } from "@/lib/site-data";
 import { ServiceIcon, StarIcon, WhatsAppIcon } from "@/components/icons";
 import heroImage from "@/assets/hero-carpenter.jpg";
 
@@ -7,12 +7,37 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "نجار جدة | أفضل نجار في جدة - Best Carpenter in Jeddah" },
-      { name: "description", content: "نجار محترف في جدة لخدمات فك وتركيب الأثاث، المطابخ، الأبواب والديكورات. اتصل الآن لخدمة سريعة في كل أحياء جدة." },
+      { name: "description", content: "نجار محترف في حي الحمدانية بجدة لخدمات فك وتركيب الأثاث، المطابخ، الأبواب والديكورات. نخدم حي الحمدانية، الفلاح، الكوثر، الريحان، الصالحية، الأصالة وجميع أحياء جدة." },
       { property: "og:title", content: "نجار جدة | Best Carpenter in Jeddah" },
-      { property: "og:description", content: "خدمات نجارة احترافية في جميع أحياء جدة - خبرة 15 سنة" },
+      { property: "og:description", content: "خدمات نجارة احترافية في حي الحمدانية وجميع أحياء جدة - خبرة 15 سنة" },
       { property: "og:url", content: "https://www.nazeercarpenter.com/" },
     ],
     links: [{ rel: "canonical", href: "https://www.nazeercarpenter.com/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          name: "نجار جدة - Jeddah Carpenter",
+          image: "https://www.nazeercarpenter.com/",
+          telephone: PHONE,
+          priceRange: "$$",
+          url: "https://www.nazeercarpenter.com/",
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Al Hamadaniyyah, Jeddah",
+            addressRegion: "Makkah",
+            addressCountry: "SA",
+          },
+          openingHours: "Sa-Th 07:00-22:00",
+          areaServed: [
+            ...PRIMARY_NEIGHBORHOODS_EN.map((n) => ({ "@type": "Place", name: `${n}, Jeddah` })),
+            { "@type": "City", name: "Jeddah" },
+          ],
+        }),
+      },
+    ],
   }),
   component: Home,
 });
@@ -47,10 +72,11 @@ function Home() {
             </div>
             <h1 className="text-4xl md:text-6xl font-black leading-tight">
               أفضل <span className="text-gold">نجار في جدة</span>
+              <span className="block text-lg md:text-2xl text-white/80 font-bold mt-3">نجار في حي الحمدانية وما حولها</span>
               <span className="block text-xl md:text-2xl text-white/70 font-en font-semibold mt-3 tracking-tight">Best Carpenter in Jeddah</span>
             </h1>
             <p className="mt-6 text-base md:text-lg text-white/80 leading-relaxed max-w-2xl">
-              خدمات نجارة احترافية لجميع أحياء جدة — فك وتركيب الأثاث، تفصيل مطابخ، ديكورات خشبية، أبواب وأكثر. خبرة تزيد عن 15 سنة وضمان كامل على جميع الأعمال.
+              خدمات نجارة احترافية لجميع أحياء جدة — نتواجد في حي الحمدانية ونخدم حي الفلاح، حي الكوثر، حي الريحان، حي الصالحية، حي الأصالة وباقي أحياء جدة. فك وتركيب الأثاث، تفصيل مطابخ، ديكورات خشبية، أبواب وأكثر. خبرة تزيد عن 15 سنة وضمان كامل على جميع الأعمال.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href={TEL_URL} className="bg-gold text-black font-bold px-6 py-3.5 rounded-md hover:bg-[oklch(0.82_0.14_85)] transition inline-flex items-center gap-2">
@@ -156,7 +182,7 @@ function Home() {
           <div>
             <SectionHeader align="start" kicker="تواصل معنا" titleAr="جاهزون لخدمتك في أي وقت" titleEn="Contact Us" />
             <p className="mt-6 text-muted-foreground leading-relaxed">
-              اتصل بنا الآن أو راسلنا عبر واتساب للحصول على عرض سعر مجاني خلال دقائق. خدمتنا متاحة في جميع أحياء جدة.
+              اتصل بنا الآن أو راسلنا عبر واتساب للحصول على عرض سعر مجاني خلال دقائق. مقرنا في <strong className="text-ink">حي الحمدانية بجدة</strong> ونصل إليك في جميع الأحياء المجاورة.
             </p>
             <div className="mt-8 space-y-4">
               <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="flex items-center gap-4 bg-ink text-white rounded-lg px-5 py-4 hover:bg-gold hover:text-black transition">
@@ -174,6 +200,13 @@ function Home() {
                 </div>
               </a>
               <div className="flex items-center gap-4 border border-border rounded-lg px-5 py-4">
+                <span className="text-2xl">📍</span>
+                <div>
+                  <div className="text-xs text-muted-foreground">موقعنا</div>
+                  <div className="font-bold">حي الحمدانية، جدة</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-4 border border-border rounded-lg px-5 py-4">
                 <span className="text-2xl">🕒</span>
                 <div>
                   <div className="text-xs text-muted-foreground">ساعات العمل</div>
@@ -184,13 +217,18 @@ function Home() {
           </div>
           <div className="aspect-square md:aspect-auto md:h-[420px] bg-ink rounded-lg overflow-hidden border border-border">
             <iframe
-              title="Jeddah Map"
-              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d237719.7!2d39.05!3d21.54!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ssa!4v1700000000000"
+              title="حي الحمدانية، جدة - Al Hamadaniyyah, Jeddah"
+              src="https://www.google.com/maps?q=Al+Hamadaniyyah,+Jeddah,+Saudi+Arabia&output=embed"
               className="w-full h-full grayscale contrast-125"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 mt-10">
+          <p className="text-sm md:text-base leading-relaxed text-ink/80 bg-gold/10 border-r-4 border-gold rounded-lg p-5">
+            {COVERAGE_PARAGRAPH}
+          </p>
         </div>
       </section>
     </div>
