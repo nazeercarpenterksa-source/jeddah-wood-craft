@@ -147,7 +147,10 @@ export const Route = createFileRoute("/services/$slug")({
           areaServed: {
             "@type": "City",
             name: "Jeddah",
-            containsPlace: NEIGHBORHOODS.map((n) => ({ "@type": "Place", name: n })),
+            containsPlace: [
+              ...PRIMARY_NEIGHBORHOODS_EN.map((n) => ({ "@type": "Place", name: `${n}, Jeddah` })),
+              ...NEIGHBORHOODS.map((n) => ({ "@type": "Place", name: n })),
+            ],
           },
           provider: {
             "@type": "LocalBusiness",
@@ -155,9 +158,12 @@ export const Route = createFileRoute("/services/$slug")({
             telephone: PHONE,
             priceRange: "$$",
             image: imageAbs,
-            address: { "@type": "PostalAddress", addressLocality: "Jeddah", addressCountry: "SA" },
+            address: { "@type": "PostalAddress", addressLocality: "Al Hamadaniyyah, Jeddah", addressRegion: "Makkah", addressCountry: "SA" },
             openingHours: "Sa-Th 07:00-22:00",
-            areaServed: "Jeddah",
+            areaServed: [
+              ...PRIMARY_NEIGHBORHOODS_EN.map((n) => ({ "@type": "Place", name: `${n}, Jeddah` })),
+              { "@type": "City", name: "Jeddah" },
+            ],
           },
           url: canonical,
         }),
