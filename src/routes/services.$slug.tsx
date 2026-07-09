@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { SERVICES, TEL_URL, WHATSAPP_URL, PHONE, NEIGHBORHOODS } from "@/lib/site-data";
+import { SERVICES, TEL_URL, WHATSAPP_URL, PHONE, NEIGHBORHOODS, COVERAGE_PARAGRAPH, PRIMARY_NEIGHBORHOODS_EN } from "@/lib/site-data";
 import { ServiceIcon } from "@/components/icons";
 import { SectionHeader } from "@/routes/index";
 import { marked } from "marked";
