@@ -157,7 +157,7 @@ function Home() {
           <div>
             <SectionHeader align="start" kicker="تواصل معنا" titleAr="جاهزون لخدمتك في أي وقت" titleEn="Contact Us" />
             <p className="mt-6 text-muted-foreground leading-relaxed">
-              اتصل بنا الآن أو راسلنا عبر واتساب للحصول على عرض سعر مجاني خلال دقائق. خدمتنا متاحة في جميع أحياء جدة.
+              اتصل بنا الآن أو راسلنا عبر واتساب للحصول على عرض سعر مجاني خلال دقائق. مقرنا في <strong className="text-ink">حي الحمدانية بجدة</strong> ونصل إليك في جميع الأحياء المجاورة.
             </p>
             <div className="mt-8 space-y-4">
               <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="flex items-center gap-4 bg-ink text-white rounded-lg px-5 py-4 hover:bg-gold hover:text-black transition">
@@ -175,6 +175,13 @@ function Home() {
                 </div>
               </a>
               <div className="flex items-center gap-4 border border-border rounded-lg px-5 py-4">
+                <span className="text-2xl">📍</span>
+                <div>
+                  <div className="text-xs text-muted-foreground">موقعنا</div>
+                  <div className="font-bold">حي الحمدانية، جدة</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-4 border border-border rounded-lg px-5 py-4">
                 <span className="text-2xl">🕒</span>
                 <div>
                   <div className="text-xs text-muted-foreground">ساعات العمل</div>
@@ -185,13 +192,18 @@ function Home() {
           </div>
           <div className="aspect-square md:aspect-auto md:h-[420px] bg-ink rounded-lg overflow-hidden border border-border">
             <iframe
-              title="Jeddah Map"
-              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d237719.7!2d39.05!3d21.54!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ssa!4v1700000000000"
+              title="حي الحمدانية، جدة - Al Hamadaniyyah, Jeddah"
+              src="https://www.google.com/maps?q=Al+Hamadaniyyah,+Jeddah,+Saudi+Arabia&output=embed"
               className="w-full h-full grayscale contrast-125"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 mt-10">
+          <p className="text-sm md:text-base leading-relaxed text-ink/80 bg-gold/10 border-r-4 border-gold rounded-lg p-5">
+            {COVERAGE_PARAGRAPH}
+          </p>
         </div>
       </section>
     </div>
