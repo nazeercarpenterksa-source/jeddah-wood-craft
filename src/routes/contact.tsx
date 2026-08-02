@@ -6,9 +6,9 @@ import { SectionHeader } from "@/routes/index";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "تواصل معنا | نجار الحمدانية جده فك تركيب وصيانه - Contact" },
+      { title: "تواصل معنا | نجار الحمدانية جده فك و تركيب وصيانه - Contact" },
       { name: "description", content: "تواصل مع أفضل نجار في جدة عبر الهاتف أو واتساب للحصول على عرض سعر مجاني." },
-      { property: "og:title", content: "تواصل معنا | نجار الحمدانية جده فك تركيب وصيانه" },
+      { property: "og:title", content: "تواصل معنا | نجار الحمدانية جده فك و تركيب وصيانه" },
       { property: "og:url", content: "https://www.nazeercarpenter.com/contact" },
     ],
     links: [{ rel: "canonical", href: "https://www.nazeercarpenter.com/contact" }],
