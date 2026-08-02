@@ -154,7 +154,7 @@ export const Route = createFileRoute("/services/$slug")({
           },
           provider: {
             "@type": "LocalBusiness",
-            name: "نجار الحمدانية جده فك تركيب وصيانه - Jeddah Carpenter",
+            name: "نجار الحمدانية جده فك تركيب وصيانه",
             telephone: PHONE,
             priceRange: "$$",
             image: imageAbs,
