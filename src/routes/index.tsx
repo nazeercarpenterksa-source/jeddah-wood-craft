@@ -6,7 +6,7 @@ import heroImage from "@/assets/hero-carpenter.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "نجار الحمدانية جده فك تركيب وصيانه | أفضل نجار في جدة - Best Carpenter in Jeddah" },
+      { title: "نجار الحمدانية جده فك تركيب وصيانه | جدة" },
       { name: "description", content: "نجار محترف في حي الحمدانية بجدة لخدمات فك وتركيب الأثاث، المطابخ، الأبواب والديكورات. نخدم حي الحمدانية، الفلاح، الكوثر، الريحان، الصالحية، الأصالة وجميع أحياء جدة." },
       { property: "og:title", content: "نجار الحمدانية جده فك تركيب وصيانه | Best Carpenter in Jeddah" },
       { property: "og:description", content: "خدمات نجارة احترافية في حي الحمدانية وجميع أحياء جدة - خبرة 15 سنة" },
