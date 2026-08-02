@@ -9,7 +9,7 @@ export function Footer() {
         <div>
           <div className="flex items-center gap-2 mb-4">
             <div className="h-9 w-9 rounded-md bg-gold grid place-items-center text-black font-black">ن</div>
-            <div className="font-bold text-white">نجار جدة</div>
+            <div className="font-bold text-white">نجار الحمدانية جده فك تركيب وصيانه</div>
           </div>
           <p className="text-sm leading-relaxed">
             أفضل نجار في جدة لخدمات النجارة المنزلية والتجارية. خبرة تزيد عن 15 سنة وضمان على جميع الأعمال.
@@ -50,7 +50,7 @@ export function Footer() {
 
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-5 text-xs text-white/50 flex flex-wrap justify-between gap-2">
-          <span>© {new Date().getFullYear()} نجار جدة — جميع الحقوق محفوظة</span>
+          <span>© {new Date().getFullYear()} نجار الحمدانية جده فك تركيب وصيانه — جميع الحقوق محفوظة</span>
           <span className="font-en">Best Carpenter in Jeddah</span>
         </div>
       </div>
