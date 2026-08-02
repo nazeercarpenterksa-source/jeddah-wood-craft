@@ -6,9 +6,9 @@ import heroImage from "@/assets/hero-carpenter.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "نجار جدة | أفضل نجار في جدة - Best Carpenter in Jeddah" },
+      { title: "نجار الحمدانية جده فك تركيب وصيانه | أفضل نجار في جدة - Best Carpenter in Jeddah" },
       { name: "description", content: "نجار محترف في حي الحمدانية بجدة لخدمات فك وتركيب الأثاث، المطابخ، الأبواب والديكورات. نخدم حي الحمدانية، الفلاح، الكوثر، الريحان، الصالحية، الأصالة وجميع أحياء جدة." },
-      { property: "og:title", content: "نجار جدة | Best Carpenter in Jeddah" },
+      { property: "og:title", content: "نجار الحمدانية جده فك تركيب وصيانه | Best Carpenter in Jeddah" },
       { property: "og:description", content: "خدمات نجارة احترافية في حي الحمدانية وجميع أحياء جدة - خبرة 15 سنة" },
       { property: "og:url", content: "https://www.nazeercarpenter.com/" },
     ],
@@ -19,7 +19,7 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
-          name: "نجار جدة - Jeddah Carpenter",
+          name: "نجار الحمدانية جده فك تركيب وصيانه - Jeddah Carpenter",
           image: "https://www.nazeercarpenter.com/",
           telephone: PHONE,
           priceRange: "$$",
