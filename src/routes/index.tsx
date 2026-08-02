@@ -72,8 +72,8 @@ function Home() {
             </div>
             <h1 className="text-3xl md:text-5xl font-black leading-tight">
               نجار <span className="text-gold">الحمدانية جده</span> فك تركيب وصيانه
-              <span className="block text-lg md:text-2xl text-white/80 font-bold mt-3">نجار في حي الحمدانية وما حولها</span>
             </h1>
+            <p className="text-lg md:text-2xl text-white/80 font-bold mt-3">نجار في حي الحمدانية وما حولها</p>
             <p className="mt-6 text-base md:text-lg text-white/80 leading-relaxed max-w-2xl">
               خدمات نجارة احترافية لجميع أحياء جدة — نتواجد في حي الحمدانية ونخدم حي الفلاح، حي الكوثر، حي الريحان، حي الصالحية، حي الأصالة وباقي أحياء جدة. فك وتركيب الأثاث، تفصيل مطابخ، ديكورات خشبية، أبواب وأكثر. خبرة تزيد عن 15 سنة وضمان كامل على جميع الأعمال.
             </p>
