@@ -19,7 +19,7 @@ export function Navbar() {
           <div className="h-9 w-9 rounded-md bg-gold grid place-items-center text-black font-black text-lg">ن</div>
           <div className="leading-tight">
             <div className="text-[11px] sm:text-xs md:text-sm font-bold leading-tight max-w-[150px] sm:max-w-none">نجار الحمدانية جده فك تركيب وصيانه</div>
-            <div className="text-[10px] text-gold font-en tracking-widest">JEDDAH CARPENTER</div>
+            <div className="text-[10px] text-gold font-en tracking-widest">نجار الحمدانية</div>
           </div>
         </Link>
 
