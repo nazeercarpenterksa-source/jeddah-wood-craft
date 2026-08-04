@@ -71,7 +71,7 @@ function Home() {
               متاح للخدمة الآن في جدة
             </div>
             <h1 className="text-3xl md:text-5xl font-black leading-tight">
-              نجار <span className="text-gold">الحمدانية جده</span> فك و تركيب وصيانه
+              نجار <span className="text-gold">الحمدانية جده</span> فك و تركيب اثاث و صيانه
             </h1>
             <p className="text-lg md:text-2xl text-white/80 font-bold mt-3">نجار في حي الحمدانية وما حولها</p>
             <p className="mt-6 text-base md:text-lg text-white/80 leading-relaxed max-w-2xl">
