@@ -188,14 +188,14 @@ function Home() {
                 <WhatsAppIcon className="h-7 w-7 text-[#25D366]" />
                 <div>
                   <div className="text-xs opacity-70">واتساب — اضغط للمحادثة</div>
-                  <div className="font-bold font-en" dir="ltr">{PHONE_DISPLAY}</div>
+                  <div className="font-bold font-en" ><span dir="ltr">{PHONE_DISPLAY}</span></div>
                 </div>
               </a>
               <a href={TEL_URL} className="flex items-center gap-4 bg-[#25D366] text-white rounded-lg px-5 py-4 hover:opacity-90 transition">
                 <span className="text-2xl">📞</span>
                 <div>
                   <div className="text-xs opacity-90">اتصل الآن</div>
-                  <div className="font-bold font-en" dir="ltr">{PHONE_DISPLAY}</div>
+                  <div className="font-bold font-en" ><span dir="ltr">{PHONE_DISPLAY}</span></div>
                 </div>
               </a>
               <div className="flex items-center gap-4 border border-border rounded-lg px-5 py-4">
