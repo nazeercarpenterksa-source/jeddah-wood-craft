@@ -31,7 +31,7 @@ export function Navbar() {
 
         <div className="hidden md:flex items-center gap-3">
           <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="font-en text-sm text-white/80 hover:text-gold flex items-center gap-2" dir="ltr">
-            <WhatsAppIcon className="h-4 w-4 text-[#25D366]" /> <span dir="ltr">{PHONE_DISPLAY}</span>
+            <WhatsAppIcon className="h-4 w-4 text-[#25D366]" /> <span style={{ unicodeBidi: "isolate", direction: "ltr" }}>{PHONE_DISPLAY}</span>
           </a>
           <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="h-9 w-9 grid place-items-center rounded-full bg-[#25D366] text-white hover:scale-105 transition">
             <WhatsAppIcon className="h-5 w-5" />
@@ -53,7 +53,7 @@ export function Navbar() {
             <a key={l.to} href={l.to} onClick={() => setOpen(false)} className="block py-2 text-base border-b border-white/5">{l.label}</a>
           ))}
           <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="font-en text-sm text-gold flex items-center gap-2 pt-2" dir="ltr">
-            <WhatsAppIcon className="h-4 w-4 text-[#25D366]" /> <span dir="ltr">{PHONE_DISPLAY}</span>
+            <WhatsAppIcon className="h-4 w-4 text-[#25D366]" /> <span style={{ unicodeBidi: "isolate", direction: "ltr" }}>{PHONE_DISPLAY}</span>
           </a>
         </div>
       )}
