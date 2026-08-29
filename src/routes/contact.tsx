@@ -59,7 +59,7 @@ function Contact() {
           <div className="space-y-4">
             <a href={TEL_URL} className="block bg-ink text-white rounded-lg p-6 hover:bg-gold hover:text-black transition">
               <div className="text-xs opacity-70">اتصل مباشرة</div>
-              <div className="font-en font-black text-2xl mt-1" ><span dir="ltr">{PHONE_DISPLAY}</span></div>
+              <div className="font-en font-black text-2xl mt-1" ><span style={{ unicodeBidi: "isolate", direction: "ltr" }}>{PHONE_DISPLAY}</span></div>
             </a>
             <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="block bg-[#25D366] text-white rounded-lg p-6 hover:opacity-90">
               <div className="text-xs opacity-90">واتساب — رد فوري</div>

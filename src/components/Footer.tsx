@@ -15,7 +15,7 @@ export function Footer() {
             نجار الحمدانية جده فك و تركيب اثاث و صيانه لخدمات النجارة المنزلية والتجارية. خبرة تزيد عن 15 سنة وضمان على جميع الأعمال.
           </p>
           <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="mt-4 inline-flex items-center gap-2 text-sm font-en text-gold hover:text-white transition" dir="ltr">
-            <WhatsAppIcon className="h-4 w-4 text-[#25D366]" /> <span dir="ltr">{PHONE_DISPLAY}</span>
+            <WhatsAppIcon className="h-4 w-4 text-[#25D366]" /> <span style={{ unicodeBidi: "isolate", direction: "ltr" }}>{PHONE_DISPLAY}</span>
           </a>
           <p className="text-xs mt-2 text-white/60">جدة، المملكة العربية السعودية</p>
         </div>
