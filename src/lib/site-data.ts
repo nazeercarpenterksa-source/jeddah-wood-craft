@@ -20,7 +20,7 @@ export type Service = {
 };
 
 export const PHONE = "+966534875139";
-export const PHONE_DISPLAY = "+966 53 487 5139";
+export const PHONE_DISPLAY = "966534875139";
 export const WHATSAPP = "966534875139";
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP}`;
 export const TEL_URL = `tel:${PHONE}`;
