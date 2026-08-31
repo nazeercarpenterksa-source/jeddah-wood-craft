@@ -69,7 +69,7 @@
 
 لهذا السبب، الاستعانة بنجار محترف متخصص في **door repair service** هو الخيار الأمثل لضمان حل جذري وفعّال للمشكلة من أول مرة.
 
-📱 **احجز الآن عبر واتساب:** [<span style="unicode-bidi: isolate; direction: ltr;">+966 53 487 5139</span>](https://wa.me/966534875139)
+📱 **احجز الآن عبر واتساب:** [<span style="unicode-bidi: isolate; direction: ltr;">966534875139</span>](https://wa.me/966534875139)
 
 ---
 
@@ -81,6 +81,6 @@
 
 فريقنا جاهز لخدمتك في أي وقت لإصلاح بابك بأعلى جودة وأفضل الأسعار في جدة.
 
-📱 **تواصل معنا عبر واتساب:** [<span style="unicode-bidi: isolate; direction: ltr;">+966 53 487 5139</span>](https://wa.me/966534875139)
+📱 **تواصل معنا عبر واتساب:** [<span style="unicode-bidi: isolate; direction: ltr;">966534875139</span>](https://wa.me/966534875139)
 
 🕒 **ساعات العمل:** السبت - الخميس: 7ص - 10م
