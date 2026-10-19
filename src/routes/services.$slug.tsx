@@ -34,7 +34,7 @@ const SEO_OVERRIDES: Record<string, SeoOverride> = {
     whyChooseAr: "لماذا تختار خدمتنا لتركيب غرف النوم",
     whyChooseEn: "Why Choose Our Bedroom Installation Service",
     ctaTitleAr: "جاهز لتركيب غرفة نومك اليوم؟",
-    relatedSlugs: ["custom-furniture", "ikea-assembly", "kitchen-installation", "door-repair"],
+    relatedSlugs: ["furniture-renovation", "ikea-assembly", "kitchen-installation", "door-repair"],
     faqs: [
       {
         q: "لماذا تركيب غرفة النوم يحتاج إلى نجار محترف؟",
@@ -62,7 +62,7 @@ const SEO_OVERRIDES: Record<string, SeoOverride> = {
     whyChooseAr: "لماذا تختار خدمتنا لإصلاح الأبواب",
     whyChooseEn: "Why Choose Our Door Repair Service",
     ctaTitleAr: "بابك يحتاج إصلاح عاجل؟",
-    relatedSlugs: ["custom-furniture", "kitchen-installation", "bedroom-assembly", "ikea-assembly"],
+    relatedSlugs: ["wood-decoration", "kitchen-installation", "bedroom-assembly", "ikea-assembly"],
     faqs: [
       {
         q: "كم تستغرق خدمة إصلاح الأبواب؟",
@@ -82,37 +82,14 @@ const SEO_OVERRIDES: Record<string, SeoOverride> = {
       },
     ],
   },
-  "custom-furniture": {
-    title: "Custom Furniture Jeddah | تفصيل أثاث حسب الطلب في جدة",
-    description:
-      "Custom furniture Jeddah — تفصيل وتصنيع أثاث حسب الطلب في جدة: غرف نوم، دواليب مدمجة، مطابخ، مكاتب ومجالس خشبية بجودة عالية وأسعار مناسبة.",
-    keywordEn: "Custom Furniture Jeddah",
-    whyChooseAr: "لماذا تختار خدمتنا لتصنيع الأثاث المخصص في جدة",
-    whyChooseEn: "Why Choose Our Custom Furniture Service in Jeddah",
-    ctaTitleAr: "جاهز لتصنيع أثاثك المخصص اليوم؟",
-    relatedSlugs: ["bedroom-assembly", "kitchen-installation", "wood-decoration", "ikea-assembly"],
-    faqs: [
-      {
-        q: "لماذا تصنيع الأثاث المخصص يحتاج إلى نجار محترف؟",
-        a: "تصنيع الأثاث حسب الطلب عملية دقيقة تجمع بين الحرفية والهندسة. أي خطأ يؤدي إلى عدم توافق القطعة مع المساحة، ضعف في المتانة، أو عدم تناسق مع الديكور. نجار محترف يضمن قطعة أثاث فريدة ومتينة تعكس ذوقك.",
-      },
-      {
-        q: "كم يستغرق تصنيع قطعة أثاث حسب الطلب؟",
-        a: "يعتمد الوقت على حجم القطعة وتعقيد التصميم، وغالباً تتراوح المدة بين 3 إلى 14 يوماً من المعاينة حتى التركيب النهائي داخل جدة.",
-      },
-      {
-        q: "هل تقدمون معاينة وعرض سعر مجاني؟",
-        a: "نعم، نوفر معاينة مجانية داخل جدة وأخذ القياسات الدقيقة، ونقدم عرض سعر واضح وشفاف قبل بدء العمل بدون أي التزام.",
-      },
-      {
-        q: "هل تغطون جميع أحياء جدة؟",
-        a: "نعم، نغطي جميع أحياء جدة بما فيها حي الروضة، حي السلامة، حي الحمراء، حي الزهراء، حي الأندلس، حي النزهة وغيرها.",
-      },
-    ],
-  },
 };
 
 export const Route = createFileRoute("/services/$slug")({
+  loader: ({ params }) => {
+    const service = SERVICES.find((x) => x.slug === params.slug);
+    if (!service) throw notFound();
+    return { service };
+  },
   head: ({ params }) => {
     const s = SERVICES.find((x) => x.slug === params.slug);
     if (!s) return { meta: [{ title: "خدمة غير موجودة" }] };
@@ -202,11 +179,6 @@ export const Route = createFileRoute("/services/$slug")({
       links: [{ rel: "canonical", href: canonical }],
       scripts,
     };
-  },
-  loader: ({ params }) => {
-    const service = SERVICES.find((x) => x.slug === params.slug);
-    if (!service) throw notFound();
-    return { service };
   },
   component: ServicePage,
   notFoundComponent: () => (
