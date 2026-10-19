@@ -85,6 +85,11 @@ const SEO_OVERRIDES: Record<string, SeoOverride> = {
 };
 
 export const Route = createFileRoute("/services/$slug")({
+  loader: ({ params }) => {
+    const service = SERVICES.find((x) => x.slug === params.slug);
+    if (!service) throw notFound();
+    return { service };
+  },
   head: ({ params }) => {
     const s = SERVICES.find((x) => x.slug === params.slug);
     if (!s) return { meta: [{ title: "خدمة غير موجودة" }] };
@@ -174,11 +179,6 @@ export const Route = createFileRoute("/services/$slug")({
       links: [{ rel: "canonical", href: canonical }],
       scripts,
     };
-  },
-  loader: ({ params }) => {
-    const service = SERVICES.find((x) => x.slug === params.slug);
-    if (!service) throw notFound();
-    return { service };
   },
   component: ServicePage,
   notFoundComponent: () => (
