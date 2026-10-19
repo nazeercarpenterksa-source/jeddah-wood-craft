@@ -2,11 +2,8 @@ import bedroomImg from "@/assets/services/bedroom-assembly.jpg";
 import kitchenImg from "@/assets/services/kitchen-installation.jpg";
 import doorImg from "@/assets/services/door-repair.jpg";
 import decorImg from "@/assets/services/wood-decoration.jpg";
-import customImg from "@/assets/services/custom-furniture.jpg";
 import ikeaImg from "@/assets/services/ikea-assembly.jpg";
 import curtainImg from "@/assets/services/curtain-installation.jpg";
-import stairImg from "@/assets/services/under-stair-storage.jpg";
-import pergolaImg from "@/assets/services/pergola-installation.jpg";
 import renovationImg from "@/assets/services/furniture-renovation.jpg";
 
 export type Service = {
@@ -100,21 +97,6 @@ export const SERVICES: Service[] = [
     ],
   },
   {
-    slug: "custom-furniture",
-    titleAr: "تفصيل أثاث",
-    titleEn: "Custom Furniture",
-    shortAr: "تفصيل أثاث حسب الطلب والمقاسات",
-    icon: "chair",
-    image: customImg,
-    tasks: [
-      "تفصيل غرف نوم كاملة حسب الطلب",
-      "تصنيع طاولات وكراسي وأرائك خشبية",
-      "تفصيل دواليب ملابس مدمجة في الحائط",
-      "مجالس خشبية تقليدية وعصرية",
-      "تفصيل مكاتب وأثاث شركات",
-    ],
-  },
-  {
     slug: "ikea-assembly",
     titleAr: "فك وتركيب أثاث ايكيا",
     titleEn: "IKEA Assembly",
@@ -142,36 +124,6 @@ export const SERVICES: Service[] = [
       "تغيير وإزالة الستائر القديمة",
       "قياس دقيق لجميع المقاسات",
       "خدمة منزلية متكاملة",
-    ],
-  },
-  {
-    slug: "under-stair-storage",
-    titleAr: "تقفيل تحت السلم",
-    titleEn: "Under-Stair Storage",
-    shortAr: "استغلال أمثل لمساحة تحت السلم",
-    icon: "stairs",
-    image: stairImg,
-    tasks: [
-      "تصميم وتنفيذ خزائن تحت السلم",
-      "استغلال أمثل للمساحات الفارغة",
-      "تفصيل خزائن بالأبواب والأدراج",
-      "تشطيبات عالية الجودة بأخشاب متينة",
-      "أعمال متكاملة مع الدهان إذا لزم",
-    ],
-  },
-  {
-    slug: "pergola-installation",
-    titleAr: "تركيب برجولات",
-    titleEn: "Pergola Installation",
-    shortAr: "برجولات خشبية للحدائق والأسطح",
-    icon: "pergola",
-    image: pergolaImg,
-    tasks: [
-      "تركيب برجولات خشبية للحدائق والأسطح",
-      "تصميم برجولات حسب مساحة المكان",
-      "أخشاب مقاومة للطقس والرطوبة",
-      "برجولات بديكورات عربية وعصرية",
-      "صيانة وتجديد البرجولات القائمة",
     ],
   },
   {
