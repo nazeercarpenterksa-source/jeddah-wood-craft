@@ -12,8 +12,9 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as ContactRouteImport } from './routes/contact'
-import { Route as ProbeTestRouteImport } from './routes/probe-test'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as ProbeTestIdRouteImport } from './routes/probe-test.$id'
+import { Route as ProbeTest2IdRouteImport } from './routes/probe-test2.$id'
 import { Route as ServicesSlugRouteImport } from './routes/services.$slug'
 
 const IndexRoute = IndexRouteImport.update({
@@ -31,14 +32,19 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ProbeTestRoute = ProbeTestRouteImport.update({
-  id: '/probe-test',
-  path: '/probe-test',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProbeTestIdRoute = ProbeTestIdRouteImport.update({
+  id: '/probe-test/$id',
+  path: '/probe-test/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProbeTest2IdRoute = ProbeTest2IdRouteImport.update({
+  id: '/probe-test2/$id',
+  path: '/probe-test2/$id',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ServicesSlugRoute = ServicesSlugRouteImport.update({
@@ -51,16 +57,18 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
-  '/probe-test': typeof ProbeTestRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/probe-test/$id': typeof ProbeTestIdRoute
+  '/probe-test2/$id': typeof ProbeTest2IdRoute
   '/services/$slug': typeof ServicesSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
-  '/probe-test': typeof ProbeTestRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/probe-test/$id': typeof ProbeTestIdRoute
+  '/probe-test2/$id': typeof ProbeTest2IdRoute
   '/services/$slug': typeof ServicesSlugRoute
 }
 export interface FileRoutesById {
@@ -68,8 +76,9 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
-  '/probe-test': typeof ProbeTestRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/probe-test/$id': typeof ProbeTestIdRoute
+  '/probe-test2/$id': typeof ProbeTest2IdRoute
   '/services/$slug': typeof ServicesSlugRoute
 }
 export interface FileRouteTypes {
@@ -78,24 +87,27 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/contact'
-    | '/probe-test'
     | '/sitemap.xml'
+    | '/probe-test/$id'
+    | '/probe-test2/$id'
     | '/services/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
     | '/contact'
-    | '/probe-test'
     | '/sitemap.xml'
+    | '/probe-test/$id'
+    | '/probe-test2/$id'
     | '/services/$slug'
   id:
     | '__root__'
     | '/'
     | '/about'
     | '/contact'
-    | '/probe-test'
     | '/sitemap.xml'
+    | '/probe-test/$id'
+    | '/probe-test2/$id'
     | '/services/$slug'
   fileRoutesById: FileRoutesById
 }
@@ -103,8 +115,9 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
-  ProbeTestRoute: typeof ProbeTestRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  ProbeTestIdRoute: typeof ProbeTestIdRoute
+  ProbeTest2IdRoute: typeof ProbeTest2IdRoute
   ServicesSlugRoute: typeof ServicesSlugRoute
 }
 
@@ -131,18 +144,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/probe-test': {
-      id: '/probe-test'
-      path: '/probe-test'
-      fullPath: '/probe-test'
-      preLoaderRoute: typeof ProbeTestRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/sitemap.xml': {
       id: '/sitemap.xml'
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/probe-test/$id': {
+      id: '/probe-test/$id'
+      path: '/probe-test/$id'
+      fullPath: '/probe-test/$id'
+      preLoaderRoute: typeof ProbeTestIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/probe-test2/$id': {
+      id: '/probe-test2/$id'
+      path: '/probe-test2/$id'
+      fullPath: '/probe-test2/$id'
+      preLoaderRoute: typeof ProbeTest2IdRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/services/$slug': {
@@ -159,8 +179,9 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
-  ProbeTestRoute: ProbeTestRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  ProbeTestIdRoute: ProbeTestIdRoute,
+  ProbeTest2IdRoute: ProbeTest2IdRoute,
   ServicesSlugRoute: ServicesSlugRoute,
 }
 export const routeTree = rootRouteImport
